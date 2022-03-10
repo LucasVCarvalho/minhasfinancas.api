@@ -63,7 +63,7 @@ public class LancamentoServiceImpl implements LancamentoService{
 	}
 
 	@Override
-	public void atualiziarStatus(Lancamento lancamento, StatusLancamento status) {
+	public void atualizarStatus(Lancamento lancamento, StatusLancamento status) {
 		lancamento.setStatus(status);
 		atualizar(lancamento);
 	}

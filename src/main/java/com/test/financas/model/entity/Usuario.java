@@ -13,6 +13,8 @@ import javax.persistence.Table;
 import org.springframework.data.convert.Jsr310Converters;
 import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -33,15 +35,13 @@ public class Usuario {
 	private Long id;
 	
 	@Column(name = "nome")
-	@Setter
 	private String nome;
 	
 	@Column(name = "email")
-	@Setter
 	private String email;
 	
 	@Column(name = "senha")
-	@Setter
+	@JsonIgnore
 	private String senha;
 
 	@Column(name = "data_cadastro")
